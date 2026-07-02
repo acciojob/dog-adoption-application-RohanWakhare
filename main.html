@@ -1,16 +1,171 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8">
+  <title>Dog Adoption Application</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 40px;
+      width: 100%;
+      max-width: 480px;
+      border: 1px solid #ddd;
+    }
+
+    .card h1 {
+      font-size: 22px;
+      color: #2c3e50;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: #3498db;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+
+    .checkbox-group input {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      margin: 0;
+      font-weight: 400;
+      font-size: 13px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    select[multiple] {
+      height: 110px;
+      padding: 8px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background: #2980b9;
+    }
+
+    small {
+      font-size: 11px;
+      color: #999;
+      margin-top: 4px;
+      display: block;
+    }
+  </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <div class="card">
+    <h1>🐶 Dog Adoption Application</h1>
+    <p>Fill in the details below to submit your adoption request.</p>
+
+    <form>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="Phone Number">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Address">
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">
+          <label for="checkbox">Have you ever lived with a Dog before?</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="multiSelect">Preferred Breeds</label>
+        <select id="multiSelect" multiple>
+          <option value="golden_retriever">Golden Retriever</option>
+          <option value="poodle">Poodle</option>
+          <option value="labrador">Labrador Retriever</option>
+          <option value="bulldog">Bulldog</option>
+          <option value="beagle">Beagle</option>
+        </select>
+        <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple breeds.</small>
+      </div>
+
+      <input type="submit" id="submit" value="Submit">
+
+    </form>
+  </div>
 
 </body>
-
 </html>
